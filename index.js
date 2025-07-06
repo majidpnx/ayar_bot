@@ -13,6 +13,19 @@ const TOKEN = '7621113599:AAH6JS1Kpb0_5upgGyd72dYwsEsDJNdjT6g';
 
 const API_URL = `https://BrsApi.ir/Api/Market/Gold_Currency.php?key=${API_KEY}`;
 
+
+
+const TelegramBot = require('node-telegram-bot-api');
+const express = require('express');
+const bodyParser = require('body-parser');
+
+
+
+const URL = 'https://ayar-bot.vercel.app/';
+
+bot.setWebHook(`${URL}/bot${TOKEN}`);
+
+
 // ساخت بات با polling
 const bot = new TelegramBot(TOKEN, { polling: true });
 const getPrice = async () => {
